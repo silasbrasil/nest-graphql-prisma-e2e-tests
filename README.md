@@ -37,7 +37,6 @@ $ npm install
 ```bash
 # development
 $ npm run start
-# Access graphql apollo in localhost:3000/graphql
 
 # watch mode
 $ npm run start:dev
@@ -46,7 +45,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-Access graphql apollo in [localhost:3000](localhost:3000/graphql)
+Access graphql apollo in [localhost:3000](http://localhost:3000/graphql)
 
 ## Test
 
