@@ -45,7 +45,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-Access graphql apollo in [localhost:3000](http://localhost:3000/graphql)
+Access graphql apollo in [localhost:3000/graphql](http://localhost:3000/graphql)
 
 ## Test
 
