@@ -7,6 +7,11 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export class CreateUser {
+    email: string;
+    name?: Nullable<string>;
+}
+
 export class User {
     id: number;
     email: string;
@@ -23,6 +28,10 @@ export class Post {
 
 export abstract class IQuery {
     abstract getUserById(id: number): Nullable<User> | Promise<Nullable<User>>;
+}
+
+export abstract class IMutation {
+    abstract createUser(createUser: CreateUser): Nullable<User> | Promise<Nullable<User>>;
 }
 
 type Nullable<T> = T | null;
