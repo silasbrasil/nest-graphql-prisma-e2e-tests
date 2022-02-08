@@ -16,3 +16,12 @@ type Post {
 type Query {
   getUserById(id: Int!): User
 }
+
+type Mutation {
+  createUser(createUser: CreateUser!): User
+}
+
+input CreateUser {
+  email: String!
+  name: String
+}
