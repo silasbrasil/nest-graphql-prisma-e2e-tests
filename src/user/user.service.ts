@@ -13,6 +13,6 @@ export class UserService {
   }
 
   async createUser(createUserDto: CreateUserDto): Promise<any> {
-    return createUserDto;
+    return { ...createUserDto, id: 1, };
   }
 }

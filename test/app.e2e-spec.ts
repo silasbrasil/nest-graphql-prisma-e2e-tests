@@ -15,10 +15,25 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+  it('GraphQL query getUserById', async () => {
+    const payload = {
+      query: `
+        query Query($getUserById: Int!) {
+          getUserById(id: $getUserById) {
+            id
+          }
+        }      
+      `,
+      variables: {
+        getUserById: 1
+      }
+    }
+
+    const response = await request(app.getHttpServer())
+      .post('/graphql')
+      .send(payload);
+
+    expect(response.status).toBe(200);
+    expect(response.body.data.getUserById).toBeDefined();
   });
 });

@@ -23,6 +23,7 @@ export class Post {
     id: number;
     title: string;
     description?: Nullable<string>;
+    published?: Nullable<boolean>;
     url?: Nullable<string>;
 }
 
