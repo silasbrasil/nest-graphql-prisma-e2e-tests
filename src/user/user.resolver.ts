@@ -14,7 +14,6 @@ export class UserResolver {
 
   @Mutation()
   async createUser(@Args('createUser', ValidationPipe) createUserDto: CreateUserDto) {
-    console.log(createUserDto);
-    return createUserDto;
+    return this.userService.createUser(createUserDto);
   }
 }
